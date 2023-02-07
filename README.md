@@ -1,12 +1,12 @@
-# Deployment with the `jboss/wildfly` Docker image
+# Deployment with the `wildfly/wildfly` Docker image
 
-This example shows how to deploy a war file using the [`jboss/wildfly` Docker image](https://registry.hub.docker.com/u/jboss/wildfly/).
+This example shows how to deploy a war file using the [`wildfly/wildfly` Container image](https://quay.io/repository/wildfly/wildfly).
 
 ## Instructions
 
 1. Create `Dockerfile` with following content:
 
-        FROM jboss/wildfly
+        FROM quay.io/repository/wildfly/wildfly
         ADD node-info.war /opt/jboss/wildfly/standalone/deployments/
 2. Place your `node-info.war` file in the same directory as your `Dockerfile`.
 3. Run the build with `docker build --tag=wildfly-app .`
